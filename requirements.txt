@@ -1,0 +1,10 @@
+# scraper
+recipe-scrapers==13.3.5
+yagmail==0.14.256
+
+# static site generator
+pelican==4.6.0
+
+# notebooks
+jupyter==1.0.0
+jupyterlab==3.1.7
