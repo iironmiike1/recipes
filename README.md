@@ -37,9 +37,7 @@ Generally, you can just pick the top-level packages and just list those instead 
 ``` Powershell Prompt
 To change the Powershell prompt to only display the current working directory copy and paste this into your powershell:
 
-
 function prompt {
-($pwd -split '\\')[0]+' '+$(($pwd -split '\\')[-1] -join '\') + '> '
+$(($pwd -split '\\')[-1] -join '\') + '> '
 }
-
 ```
