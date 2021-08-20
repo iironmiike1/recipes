@@ -41,3 +41,11 @@ function prompt {
 $(($pwd -split '\\')[-1] -join '\') + '> '
 }
 ```
+function prompt {'<recipes> '+$(($pwd -split '\\')[-1] -join '\') + '> '}
+
+``` Turning off Git warning message
+With Git, when using the autocrlf = true flag, a warning is still given when line-endings are changed. Here's how to turn off the annoying message:
+
+git config --global core.safecrlf false
+```
+
