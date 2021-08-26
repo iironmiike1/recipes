@@ -1,0 +1,38 @@
+cd /users/Miike/Documents
+mkdir ./python_workspaces
+cd python_workspaces
+mkdir recipes
+cd recipes
+C:\Users\Miike\AppData\Local\Programs\Python\Python39\python -m venv venv
+
+cd C:\Users\Miike\Documents\python_workspaces\recipes
+
+function prompt {'<recipes> '+$(($pwd -split '\\')[-1] -join '\') + '> '}
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+./venv/Scripts/Activate.ps1
+echo $env:PATH
+echo $env:VIRTUAL_ENV
+
+git config --global core.safecrlf false
+
+On the laptop execute:
+
+pip freeze > requirements.txt
+
+After copying requirements.txt to the desktop envirnment, execute:
+
+pip install -r requirements.txt
+
+https://docs.microsoft.com/en-us/learn/modules/python-install-vscode/
+
+When running 'jupyter lab', it complained that it needed nodejs, that notebook recipe_sender rev2.
+ipynb isn't trusted and didn't actually run any of the Python cells.
+So, install nodejs:
+
+pip install nodejs
+
+... and re-started JupyterLab:
+
+jupyter lab
+
+At first, it still didn't execute anything. Re-stsarted the kernel and all is good.

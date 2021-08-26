@@ -2,3 +2,4 @@ venv/
 __pycache__/
 Recipes_Website/
 .env
+.ipynb_checkpoints/recipe_sender rev 2-checkpoint.ipynb
